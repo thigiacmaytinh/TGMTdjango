@@ -80,7 +80,6 @@ def SaveBase64ToImg(folder_name, file_name, imageData):
         imageData = imageData.replace("data:image/png;base64,", "")
         if has_multiple_images:
             imageData = imageData.split("|")
-        uploaded_file_urls = ""
 
         if has_multiple_images:
             for img in imageData:

@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^webcam/$', views.webcam, name='webcam'),
     url(r'^video_feed/$', views.video_feed, name='video_feed'),
     url(r'^stream/$', views.stream, name='stream'),
+    url(r'^upload/$', views.upload),
 ]
 handler404 = views.notfound

@@ -6,4 +6,5 @@ from .views import index, login, logout, user,\
     webcam,\
     register,  \
     video_feed, \
-    stream
+    stream, \
+    upload

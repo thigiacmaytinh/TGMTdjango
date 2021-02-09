@@ -11,7 +11,7 @@ if(cascade.empty()):
 
 ####################################################################################################
 
-def DetectFace(frame):
+def DetectFaceByCascade(frame):
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     gray = cv2.equalizeHist(gray)
     rects = cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=4, minSize=(30, 30),
@@ -34,7 +34,7 @@ def streamwebcam():
     while djangoSettings.PLAY_WEBCAM:
         djangoSettings.WEBCAM_CONNECTED, frame = cam.read()
 
-        frame, rects = DetectFace(frame)
+        frame, rects = DetectFaceByCascade(frame)
         djangoSettings.NUM_FACE = len(rects)
 
         (flag, encodedImage) = cv2.imencode(".jpg", frame)

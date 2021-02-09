@@ -60,6 +60,10 @@ def webcam(request):
     permissions = ["Root", "Admin", "Gate", "Supporter"]
     return CheckToken(request, 'webcam.html', permissions)
 
+def upload(request):
+    permissions = ["Root", "Admin"]
+    return CheckToken(request, 'upload.html', permissions)
+
 def Redirect(request):
     args = {
         'authorized': False,
